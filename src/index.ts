@@ -10,7 +10,7 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
 client.once('ready', () => {
   if (TOKEN && TOKEN?.length > 0) {
-    console.log('Bot listo!');
+    console.log('masterBot esta preparado!');
   } else {
     console.log('Bot sin token!');
   }
