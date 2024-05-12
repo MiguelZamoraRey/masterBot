@@ -1,20 +1,21 @@
 {
-  "name": "express-template-2024",
+  "name": "master-bot",
   "version": "1.0.0",
-  "description": "template for express project with typescript, prettier, eslint, and jest",
+  "description": "masterBot is a discord bot created to be able to play role-playing games with a master that uses the AI to respond to you organically.",
   "keywords": [
-    "express",
+    "discord",
+    "bot",
     "template",
     "TypeScript"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MiguelZamoraRey/express-template-2024.git"
+    "url": "git+https://github.com/MiguelZamoraRey/masterBot/tree/master"
   },
   "bugs": {
-    "url": "https://github.com/MiguelZamoraRey/express-template-2024/issues"
+    "url": "https://github.com/MiguelZamoraRey/masterBot/issues"
   },
-  "homepage": "https://github.com/MiguelZamoraRey/express-template-2024#readme",
+  "homepage": "https://github.com/MiguelZamoraRey/masterBot#readme",
   "author": "Miguel Zamora Rey <miguelzamorarey@gmail.com>",
   "license": "MIT",
   "main": "src/index.js",

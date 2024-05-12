@@ -1,6 +1,6 @@
-# ¿Qué es esto?
+# What is this?
 
-Este proyecto es un template para crear rápidamente aplicaciones de backend con express + typescript, con las configuraciones de eslint y prettier ya realizadas, y las rutas absolutas con el @.
+masterBot is a discord bot created to be able to play role-playing games with a master that uses the AI to respond to you organically.
 
 ## Instalación
 
@@ -27,15 +27,5 @@ Y una vez creado puedes iniciar el build con
 1. Crea un **.env**, en la raíz dle proyecto con la siguiente variable:
 
 <code>
-PORT=3000
+DISCORD_TOKEN=[TU TOKEN DE DISCORD]
 </code>
-
-2. Puedes ver los ejemplos en las rutas:
-
-> http://localhost:3000/
-
-> http://localhost:3000/example/hello
-
-## Roadmap
-
-- Añadir soporte para **Jest**
