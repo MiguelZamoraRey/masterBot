@@ -19,7 +19,7 @@
   "license": "MIT",
   "main": "src/index.js",
   "scripts": {
-    "build": "babel --extensions \".ts,.js\" --out-dir dist --copy-files",
+    "build": "babel src --extensions \".ts,.js\" --out-dir dist --copy-files",
     "start": "node dist/index.js",
     "dev": "tsnd -r tsconfig-paths/register --respawn --ignore-watch node_modules src/index.ts"
   },
