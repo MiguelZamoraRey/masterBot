@@ -12,7 +12,11 @@ const prefix = '';
 
 // Cuando el bot esté listo, imprime un mensaje en la consola
 client.once('ready', () => {
-  console.log('Bot listo!');
+  if (TOKEN && TOKEN?.length > 0) {
+    console.log('Bot listo!');
+  } else {
+    console.log('Bot sin token!');
+  }
 });
 
 // Escucha los mensajes
@@ -20,6 +24,7 @@ client.on('message', (message: Message) => {
   // Ignora los mensajes del bot
   if (message.author.bot) return;
 
+  console.log('Mensaje recibido:', message.content);
   // Si el mensaje es "holi"
   if (message.content.toLowerCase() === 'holi') {
     // Envía "holi goli" como respuesta
