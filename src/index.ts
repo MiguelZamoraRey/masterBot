@@ -12,7 +12,7 @@ client.once('ready', () => {
   if (TOKEN && TOKEN?.length > 0) {
     console.log('masterBot esta preparado!');
   } else {
-    console.log('Bot sin token!');
+    console.log('masterBot no tiene token!');
   }
 });
 
