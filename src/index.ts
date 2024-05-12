@@ -6,7 +6,7 @@ const TOKEN = process.env.DISCORD_TOKEN;
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
-const prefix = '';
+//const prefix = '';
 
 client.once('ready', () => {
   if (TOKEN && TOKEN?.length > 0) {
@@ -24,4 +24,8 @@ client.on('message', (message: Message) => {
   }
 });
 
-client.login(TOKEN).catch(console.error);
+client.login(TOKEN).catch((err) => {
+  console.log('ERROR: ', err);
+  console.log('ERROR (message): ', err.message);
+  console.error;
+});
