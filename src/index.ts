@@ -1,8 +1,22 @@
 import dotenv from 'dotenv';
 dotenv.config();
+const PiCamera = require('pi-camera');
+const myCamera = new PiCamera({
+  mode: 'photo',
+  output: `${__dirname}/test.jpg`,
+  width: 640,
+  height: 480,
+  nopreview: true
+});
 
 // Require the necessary discord.js classes
-import { Client, GatewayIntentBits, Message } from 'discord.js';
+import {
+  Client,
+  GatewayIntentBits,
+  Message,
+  MessageCreateOptions,
+  MessagePayload
+} from 'discord.js';
 const TOKEN = process.env.DISCORD_TOKEN;
 
 // Create a new client instance
@@ -31,6 +45,16 @@ client.on('messageCreate', (message: Message) => {
     console.log('Responding to "holi" message');
     message.channel.send('**HOLI GOLI**');
     return;
+  }
+  if (message.content === 'foto') {
+    myCamera
+      .snap()
+      .then((result: string | MessagePayload | MessageCreateOptions) => {
+        message.channel.send(result);
+      })
+      .catch((error: any) => {
+        console.log(`Error on picking camera ${error}`);
+      });
   }
 });
 
